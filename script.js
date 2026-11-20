@@ -2,8 +2,35 @@
 
 // localStorage.clear();
 
-localStorage.setItem("name","Abhishu Krishel");
+// localStorage.setItem("name","Abhishu Krishel");
+// let Cname = localStorage.getItem("name");
+// console.log(Cname);
 
-let Cname = localStorage.getItem("name");
+const customerList = [
+    {
+        name : "Pasidi",
+        age : 20,
+        address : "negombo"
+    },
+    {
+        name : "Nethra",
+        age : 20,
+        address : "ambilipitiya"
+    },
+    {
+        name : "Abhishu",
+        age : 3,
+        address : "Japan"
+    },
+    {
+        name : "Esh",
+        age : 5,
+        address : "Dalupatha"
+    },
+];
 
-console.log(Cname);
+let arCustomer =JSON.stringify(customerList);
+localStorage.setItem("customerList",arCustomer);
+let listCustomer = localStorage.getItem("customerList");
+console.log(JSON.parse(listCustomer));
+
